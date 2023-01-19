@@ -1,12 +1,16 @@
 import { usePokemon } from '../hooks/pokemon';
+import Select from './Select/Select';
 
 export default function Main() {
-  const pokemon = usePokemon();
+  const { pokemon, types } = usePokemon();
   return (
-    <div>
-      {pokemon.map((poke) => (
-        <p key={poke._id}>{poke.pokemon}</p>
-      ))}
-    </div>
+    <>
+      <Select types={types} />
+      <div>
+        {pokemon.map((poke) => (
+          <p key={poke._id}>{poke.pokemon}</p>
+        ))}
+      </div>
+    </>
   );
 }

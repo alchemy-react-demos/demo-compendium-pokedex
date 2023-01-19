@@ -5,3 +5,11 @@ export async function fetchInitialPokemon() {
   console.log(data);
   return data.results;
 }
+
+export async function fetchTypes() {
+  const resp = await fetch('https://alchemy-pokedex.herokuapp.com/api/pokedex/types');
+  console.log(resp);
+  const data = await resp.json();
+  console.log(data);
+  return data;
+}
