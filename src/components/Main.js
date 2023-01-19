@@ -1,18 +1,13 @@
 import { usePokemon } from '../hooks/pokemon';
+import PokeList from './Pokemon/PokeList';
 import Select from './Select/Select';
 
 export default function Main() {
-  const { pokemon, types, handleTypeChange } = usePokemon();
+  const { pokemon, types, handleTypeChange, loading } = usePokemon();
   return (
     <>
       <Select types={types} handleTypeChange={handleTypeChange} />
-      <div>
-        {pokemon.map((poke) => (
-          <p key={poke._id}>
-            {poke.pokemon} {poke.type_1} {poke.type_2}
-          </p>
-        ))}
-      </div>
+      <PokeList pokemon={pokemon} loading={loading} />
     </>
   );
 }
