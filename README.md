@@ -25,9 +25,14 @@
     - sets the selectedType state
     - call the API with the selected Type
     - update the pokemon state with the API response data
+  - inputValueChange - update query state
+  - buttonClick
+    - update the queryPokemon to also accept a query input
+    - fetch the pokemon with the current query
+    - set the pokemon
 
 ## Plan
 
 - [x] Get Main component loading and showing the first 20 pokemon
 - [x] Get the select dropdown displaying the different types
-- [ ] Get the select dropdown working
+- [x] Get the select dropdown working
