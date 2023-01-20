@@ -25,6 +25,8 @@
     - sets the selectedType state
     - call the API with the selected Type
     - update the pokemon state with the API response data
+  - handleButtonClick
+    - call the API with the selected type AND the query
 
 ## Plan
 
